@@ -108,7 +108,9 @@ export default function PizzaMenu() {
               image: Pizza1,
               badge: 'SALE',
             },
-            { title: 'Mushroom Pizza', price: '$25.00', image: Pizza2 },
+            { title: 'Mushroom Pizza',
+               price: '$25.00',
+                image: Pizza2 },
             {
               title: 'Hawaiian Pizza',
               price: '$30.00',

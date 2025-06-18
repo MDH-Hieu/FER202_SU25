@@ -1,71 +1,77 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
 import menu1 from "../images/menu1.jpg";
 import menu2 from "../images/menu2.jpg";
 import menu3 from "../images/menu3.jpg";
 import menu4 from "../images/menu4.jpg";
-import '../App.css';  // gọi brage new , sales ở App.csscss
+import "../App.css";
+
+const menuItems = [
+  {
+    title: "Margenrita Pizza",
+    image: menu1,
+    price: 24.0,
+    original: 40.0,
+    badge: "SALE",
+  },
+  {
+    title: "Mushroom Pizza",
+    image: menu2,
+    price: 25.0,
+  },
+  {
+    title: "Hawaiian Pizza",
+    image: menu3,
+    price: 30.0,
+    badge: "NEW",
+  },
+  {
+    title: "Pesto Pizza",
+    image: menu4,
+    price: 36.0,
+    original: 50.0,
+    badge: "SALE",
+  },
+];
+
 function CardComponent() {
   return (
-    <div className="container p-5 ">
+    <div className="container p-5">
       <h1 className="text-left p-3 text-white">Our Menu</h1>
-      <div className="d-flex">
-        <Card style={{ width: "18rem" }} className="mx-3">
-          <span className="badge-new">SALE</span>
-          <Card.Img variant="top" src={menu1} />
-          <Card.Body>
-            <Card.Title>Margenrita Pizza</Card.Title>
-            <Card.Text>
-            <del className="text-muted me-2">$40.00</del>
-              <span style={{ color: "#ffc107", fontWeight: "bold" }}>
-                $24.00
-              </span>
-              </Card.Text>
-            <Button variant="dark" className="w-100 text-center">Buy</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }} className="mx-3">
-          <Card.Img variant="top" src={menu2} />
-          <Card.Body>
-            <Card.Title>Mushroom Pizza</Card.Title>
-            <Card.Text>
-                $25.00
-            </Card.Text>
-            <Button variant="dark" className="w-100 text-center">
-              Buy
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }} className="mx-3">
-           <span className="badge-new">NEW</span>
-          <Card.Img variant="top" src={menu3} />
-          <Card.Body>
-            <Card.Title>Hawaiian Pizza</Card.Title>
-           <Card.Text>
-                $30.00
-            </Card.Text>
-            <Button variant="dark" className="w-100 text-center">
-              Buy
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }} className="mx-3">
-           <span className="badge-new">SALE</span>
-          <Card.Img variant="top" src={menu4} />
-          <Card.Body>
-            <Card.Title>Pesto Pizza</Card.Title>
-            <Card.Text>
-              <del className="text-muted me-2">$50.00</del>
-              <span style={{ color: "#ffc107", fontWeight: "bold" }}>
-                $36.00
-              </span>
-            </Card.Text>
-            <Button variant="dark" className="w-100 text-center">
-              Buy
-            </Button>
-          </Card.Body>
-        </Card>
-      </div>
+      <Row>
+        {menuItems.map((item, index) => (
+
+          <Col md={3} key={index} className="mb-4">
+            <Card className="position-relative">
+              {item.badge && (
+                <span className="badge-new">{item.badge}</span>
+              )}
+              
+              <Card.Img variant="top" src={item.image} />
+
+              <Card.Body>
+                <Card.Title>{item.title}</Card.Title>
+                <Card.Text>
+                  {item.original && (
+                    <del className="text-muted me-2">
+                      ${item.original.toFixed(2)}
+                    </del>
+                  )}
+                  
+                  <span style={{ color: "#ffc107", fontWeight: "bold" }}>
+                    ${item.price.toFixed(2)}
+                  </span>
+                </Card.Text>
+                <Button variant="dark" className="w-100">
+                  Buy
+                </Button>
+              </Card.Body>
+
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }
+
 export default CardComponent;

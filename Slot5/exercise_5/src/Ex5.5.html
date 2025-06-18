@@ -1,17 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <title>Document</title>
+    <title>Students Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0; /* Loại bỏ margin mặc định của body */
-        }
-        .header {
+
+       .header {
             background-color: #f4a261;
             padding: 10px 20px;
             width: 100%;
@@ -56,69 +54,36 @@
             width: 150px;
             padding: 5px;
         }
-        
-            .main-image {
-                width: 100vw;
-                margin: 0 auto;
-            }
 
-            .main-image img {
-                width: 100%;
-                height: auto;
-                border: 20px solid orange;
-                box-sizing: border-box;
-                display: block;
-            }
-            .breadcrumb a {
-    color: #e76f51; /* màu cam */
- 
-}
-
-        .breadcrumb-wrapper {
+     .breadcrumb-wrapper {
     display: inline-block;
-    background-color: #afada8;
+
     padding: 10px;
     margin: 20px; /* Tùy chỉnh khoảng cách */
 }
+
+
         .student-card {
             border: 1px solid #ddd;
             padding: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            background: #fff;
             text-align: center;
         }
-        .student-card img {
-            max-width: 100%;
+        .student-img {
+            width: 50%;
             height: auto;
-            margin-bottom: 10px;
+            border-radius: 5px;
         }
-        .student-card .info {
-            margin-bottom: 10px;
-        }
-        .student-card .info .id {
-            margin-bottom: 5px;
-        }
-        .student-card .info .name-city {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .student-card .status {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-        .student-card .form-check {
-            margin: 0 10px;
-        }
-        .student-card .btn {
-            background-color: #f4a261;
-            color: white;
-            border: none;
-        }
-        .student-card .btn:hover {
-            background-color: #e76f51;
-        }
-         .footer {
+        .footer {
+    background-color: #f37021;
+    color: white;
+    padding: 30px 0;
+    width: 100vw; /* chiếm toàn bộ chiều ngang màn hình */
+    margin-left: calc(-50vw + 50%); /* căn lề trái để tràn hẳn */
+}
+.footer {
             background-color: #f4a261;
             padding: 20px;
             color: black;
@@ -148,10 +113,12 @@
             text-align: center;
             margin-top: 10px;
         }
+        
     </style>
 </head>
 <body>
-    <div >
+
+<div >
         <!-- Header -->
         <div class="header">
             <div class="row align-items-center">
@@ -181,118 +148,88 @@
             </div>
         </div>
 
-        <!-- Main Image -->
-        <div class="main-image">
-            <img src="https://dongphucatlan.vn/wp-content/uploads/2021/08/dat-may-ao-thun-dong-phuc-so-luong-it.jpg.webp" alt="Group Photo" class="img-fluid">
-        </div>
+<!-- Banner -->
+<div class="orange-header text-center">
+    <img src="https://dongphucatlan.vn/wp-content/uploads/2021/08/dat-may-ao-thun-dong-phuc-so-luong-it.jpg.webp" alt="Group Photo" >
+</div>
 
-        <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+<!-- Breadcrumb -->
+<div class="container mt-3">
+       <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Students</li>
             </ol>
         </nav>
 
-        <!-- Students Detail -->
-        <div class="container">
-            <h2 class="text-center my-4">Students Detail</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="student-card">
-                        <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 1">
-                        <div class="info">
-                            <p class="id mb-0">DE160182</p>
-                            <div class="name-city">
-                                <p class="mb-0">Nguyễn Hữu Quốc Khánh</p>
-                                <p class="mb-0">Đà Nẵng</p>
-                            </div>
-                        </div>
-                        <div class="status">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status1" id="absent1" value="absent">
-                                <label class="form-check-label" for="absent1">Absent</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status1" id="present1" value="present" checked>
-                                <label class="form-check-label" for="present1">Present</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn">Submit</button>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="student-card">
-                        <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 2">
-                        <div class="info">
-                            <p class="id mb-0">DE160377</p>
-                            <div class="name-city">
-                                <p class="mb-0">Châu Vĩnh Thịnh</p>
-                                <p class="mb-0">Quảng Nam</p>
-                            </div>
-                        </div>
-                        <div class="status">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status2" id="absent2" value="absent" checked>
-                                <label class="form-check-label" for="absent2">Absent</label>
-                            </div>
-                            <div class something
-                                <input class="form-check-input" type="radio" name="status2" id="present2" value="present">
-                                <label class="form-check-label" for="present2">Present</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn">Submit</button>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="student-card">
-                        <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 3">
-                        <div class="info">
-                            <p class="id mb-0">DE160547</p>
-                            <div class="name-city">
-                                <p class="mb-0">Đỗ Nguyên Phúc</p>
-                                <p class="mb-0">Quảng Nam</p>
-                            </div>
-                        </div>
-                        <div class="status">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status3" id="absent3" value="absent" checked>
-                                <label class="form-check-label" for="absent3">Absent</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status3" id="present3" value="present">
-                                <label class="form-check-label" for="present3">Present</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn">Submit</button>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="student-card">
-                        <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 4">
-                        <div class="info">
-                            <p class="id mb-0">DE170049</p>
-                            <div class="name-city">
-                                <p class="mb-0">Lê Hoàng Minh</p>
-                                <p class="mb-0">Đà Nẵng</p>
-                            </div>
-                        </div>
-                        <div class="status">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status4" id="absent4" value="absent">
-                                <label class="form-check-label" for="absent4">Absent</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="status4" id="present4" value="present" checked>
-                                <label class="form-check-label" for="present4">Present</label>
-                            </div>
-                        </div>
-                        <button type="button" class="btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Students Detail -->
+<h3 class="text-center mb-4">Students Detail</h3>
 
-        <!-- Footer -->
+<!-- Row 1: Student 1 & 2 -->
+<div class="row">
+    <!-- Student 1 -->
+    <div class="col-md-6">
+        <div class="student-card">
+            <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 1">
+            <p class="mt-2 mb-1"><strong>Lê Hoàng Minh</strong></p>
+            <p>DE180559 | Đà Nẵng</p>
+            <div>
+                <input type="radio" name="att1"> Absent
+                <input type="radio" name="att1"> Present
+            </div>
+            <button class="btn btn-warning mt-2">Submit</button>
+        </div>
+    </div>
+
+    <!-- Student 2 -->
+    <div class="col-md-6">
+        <div class="student-card">
+           <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 1">
+            <p class="mt-2 mb-1"><strong>Châu Vĩnh Thịnh</strong></p>
+            <p>DE180564 | Kon Tum</p>
+            <div>
+                <input type="radio" name="att2"> Absent
+                <input type="radio" name="att2"> Present
+            </div>
+            <button class="btn btn-warning mt-2">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Row 2: Student 3 & 4 -->
+<div class="row">
+    <!-- Student 3 -->
+    <div class="col-md-6">
+        <div class="student-card">
+            <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 1">
+            <p class="mt-2 mb-1"><strong>Đỗ Nguyên Phúc</strong></p>
+            <p>DE180643 | Quảng Nam</p>
+            <div>
+                <input type="radio" name="att3"> Absent
+                <input type="radio" name="att3"> Present
+            </div>
+            <button class="btn btn-warning mt-2">Submit</button>
+        </div>
+    </div>
+
+    <!-- Student 4 -->
+    <div class="col-md-6">
+        <div class="student-card">
+            <img src="https://cdn-i.vtcnews.vn/files/f2/2015/09/24/nu-sinh-rang-ro-trong-dong-phuc-ao-cam-ngay-khai-giang-5.jpg" alt="Student 1">
+            <p class="mt-2 mb-1"><strong>Nguyễn Hữu Quốc Khánh</strong></p>
+            <p>DE189903 | Quảng Bình</p>
+            <div>
+                <input type="radio" name="att4"> Absent
+                <input type="radio" name="att4"> Present
+            </div>
+            <button class="btn btn-warning mt-2">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -318,13 +255,11 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome & Bootstrap JS -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"></script>
 </body>
 </html>

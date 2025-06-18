@@ -10,7 +10,8 @@ const employees = [
 ];
 
 const CheckTeenageEmployee = () => {
-  const isTeenager = employees.some(e => e.age >= 10 && e.age <= 20);
+  
+  const isTeenager = employees.some(e => e.age>= 10 && e.age <= 20); /*e.age[1] >= 10 && e.age[1] <= 20);*/
 
   return (
     <div>

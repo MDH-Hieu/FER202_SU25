@@ -1,106 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-.header {
-  background-color: #e6ecef;
-  text-align: left;
-  text-indent: 30px;
-  font-size: 40px;
-
-  height: calc(100vh / 4);
-  box-sizing: border-box;
-  
-  display: flex;
-  align-items: center;
- 
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-
-
-.grid-item {
-  background-color: #9d9da0;
-  border: 1px solid #000; /* Viền đen rõ ràng */
-  padding: 10px;
-  text-align: left;
-  min-height: 50px; /* Chiều cao tối thiểu */
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.button{
-  margin: 25px;
-}
-.footer {
-  background-color: #998b8a;
-  text-align: center;
-  font-size: 40px;
-
-  height: calc(100vh / 10);
-  box-sizing: border-box;
-  
-
-  display: flex;
-  align-items: center;          /* căn giữa theo chiều dọc */
-  justify-content: center;
- 
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 20px;
-}
-</style>
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 3 - Grid Chuẩn (2-3-4)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .grid-box {
+      background-color: #d6d6d6;
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+    .footer-custom {
+      background-color: #d9c6c6;
+      font-weight: bold;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">Let's test the grid!</div>
-    <nav class="button">
+
+  <!-- Alert Section -->
+  <div class="alert alert-secondary text-start rounded-0 mb-0">
+    <h4 class="mb-0">Let's test the grid!</h4>
+  </div>
+   
+  <!-- Grid Section -->
+  <div class="container my-4">
+
+    <!-- Hàng 1: 2 cột -->
+    <div class="row">
+      <div class="col grid-box">First col</div>
+      <div class="col grid-box">Second col</div>
+    </div>
+
+    <!-- Hàng 2: 3 cột -->
+    <div class="row">
+      <div class="col-md-4 grid-box">col</div>
+      <div class="col-md-4 grid-box">col</div>
+      <div class="col-md-4 grid-box">col</div>
+    </div>
+
+    <!-- Hàng 3: 4 cột -->
+    <div class="row">
+      <div class="col-md-3 grid-box">col</div>
+      <div class="col-md-3 grid-box">col</div>
+      <div class="col-md-3 grid-box">col</div>
+      <div class="col-md-3 grid-box">col</div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-custom">
+    Created by ABC!
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><nav class="button">
         <a href="#" class="text-primary me-2">Active</a>
         <a href="#" class="me-2">Link</a>
         <a href="#" class="me-2">Link</a>
         <a href="#" class="text-muted" tabindex="-1" aria-disabled="true">Disabled</a>
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-6"> 
-                <div class="grid-item">First col</div>
-            </div>
-            <div class="col-6">
-                <div class="grid-item">Second col</div>
-            </div>       
-        </div>
-        <div class="row">
-            <div class="col-4"> 
-                <div class="grid-item"> col</div>
-            </div>
-            <div class="col-4">
-                <div class="grid-item"> col</div>
-            </div>  
-            <div class="col-4">
-                <div class="grid-item"> col</div>
-            </div>       
-        </div>
-        <div class="row">
-            <div class="col-3"> 
-                <div class="grid-item"> col</div>
-            </div>
-            <div class="col-3">
-                <div class="grid-item"> col</div>
-            </div>  
-            <div class="col-3">
-                <div class="grid-item"> col</div>
-            </div>  
-            <div class="col-3">
-                <div class="grid-item"> col</div>
-            </div>       
-        </div>
-        
-    </div>
-    <div class="footer">Created by ABC!</div>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-</body>
-</html>

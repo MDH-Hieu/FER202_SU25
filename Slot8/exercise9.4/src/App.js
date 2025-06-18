@@ -1,6 +1,6 @@
 import React from 'react';
 import SimpleCard from './components/SimpleCard';
-import logo from './Logo_FPT_Education.png'; // Đảm bảo ảnh đúng tên và vị trí
+import logo from './Logo_FPT_Education.png'; 
 
 function App() {
   const item = {
