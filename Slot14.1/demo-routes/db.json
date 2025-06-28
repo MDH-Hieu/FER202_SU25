@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "101",
+      "title": "Giới thiệu về React",
+      "content": "React là thư viện JavaScript được sử dụng để xây dựng giao diện người dùng."
+    },
+    {
+      "id": "102",
+      "title": "Hiểu về JSX",
+      "content": "JSX là một cú pháp mở rộng của JavaScript, cho phép viết HTML trong JavaScript."
+    },
+    {
+      "id": "103",
+      "title": "Quản lý State trong React",
+      "content": "State là một phần quan trọng trong React giúp quản lý dữ liệu động của component."
+    },
+    {
+      "id": "104",
+      "title": "React Router v6",
+      "content": "React Router cho phép bạn điều hướng giữa các trang mà không cần reload lại trang."
+    },
+    {
+      "id": "105",
+      "title": "Sử dụng useEffect",
+      "content": "Hook useEffect được dùng để xử lý các side effect như gọi API hoặc thao tác DOM."
+    }
+  ]
+}
